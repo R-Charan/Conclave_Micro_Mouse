@@ -32,5 +32,12 @@
   </node>
   
   <node name = "micro_mouse_controller" pkg = "micro_mouse" type = "differential_drive.py" output = "screen" />
+   <!-- camera-->
+  <node
+  name="spawn_model"
+  pkg="gazebo_ros"
+  type="spawn_model"
+  args="-x 0 -y 0 -z 2 -file $(find pkg_techfest_imc)/urdf/camera.urdf -urdf -model camera"
+  output="screen" />
 
 </launch>
